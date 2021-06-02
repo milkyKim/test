@@ -20,7 +20,6 @@ pipeline {
             
             steps {
                 echo 'Clonning Repository'
-
                 git url: 'https://github.com/milkyKim/test.git',
                     branch: 'master',
                     credentialsId: 'jenkinsforgithub'
@@ -61,7 +60,7 @@ pipeline {
               success {
                   echo 'Successfully Cloned Repository'
 
-                  mail  to: 'kimminji122258@gmail.com',
+                  mail  to: 'milkyykim@gmail.com',
                         subject: "Deploy Frontend Success",
                         body: "Successfully deployed frontend!"
 
@@ -70,7 +69,7 @@ pipeline {
               failure {
                   echo 'I failed :('
 
-                  mail  to: 'kimminji122258@gmail.com',
+                  mail  to: 'milkyykim@gmail.com',
                         subject: "Failed Pipelinee",
                         body: "Something is wrong with deploy frontend"
               }
@@ -148,7 +147,7 @@ pipeline {
 
           post {
             success {
-              mail  to: 'kimminji122258@gmail.com',
+              mail  to: 'milkyykim@gmail.com',
                     subject: "Deploy Success",
                     body: "Successfully deployed!"
                   
