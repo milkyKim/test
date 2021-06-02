@@ -22,7 +22,7 @@ pipeline {
                 echo 'Clonning Repository'
 
                 git url: 'https://github.com/milkyKim/test.git',
-                    branch: 'main',
+                    branch: 'master',
                     credentialsId: 'jenkinsforgithub'
             }
 
